@@ -55,7 +55,7 @@ public class MAI {
                     System.out.println(temp + " | ");
 
                 }
-                System.out.print("\n\nСумма относительной ценности\n");
+                System.out.print("\n\nНормирующий коэффициент\n");
                 System.out.println(otnSum);
 
 
@@ -66,7 +66,7 @@ public class MAI {
                 }
                 System.out.println("");
 
-                System.out.print("\n\nСумма каждого столбца\n");
+                System.out.print("\n\nСумма каждого столбца матрицы суждений\n");
 
                 for (int v = 0; v < 5; v++) {
                     f4[v] = ((st[0][v] + st[1][v] + st[2][v] + st[3][v] + st[4][v]));
@@ -74,7 +74,7 @@ public class MAI {
                 }
                 System.out.println("");
 
-                System.out.print("\n\nПропорциональность предпочтенйи\n");
+                System.out.print("\n\nПропорциональность предпочтений\n");
 
                 for (int v = 0; v < 5; v++) {
                     f5[v] = f4[v] * wagn[i - 1][v];
