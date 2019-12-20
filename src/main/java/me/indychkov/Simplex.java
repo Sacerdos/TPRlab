@@ -222,12 +222,12 @@ public class Simplex {
             }
         }
         printTable(simplexTable, xSimplexTable);
-        System.out.format("Все относительные оценки неотрицательны -> получен ответ %7.2f",
+        System.out.format("Все относительные оценки неотрицательны -> получен ответ",
                 simplexTable[simplexTable.length - 1][simplexTable[simplexTable.length - 1].length - 1]);
     }
 
     private static void ReverseMethod() {
-        System.out.println("\nПервая теорема двойственност\n");
+        System.out.println("\n\n\nПервая теорема двойственности");
         String[] xBase = new String[xSimplexTable.length - 1];
         int[] splitByXCounter = new int[xSimplexTable.length - 1];
         for (int i = 1; i < xSimplexTable.length; i++) {
@@ -235,8 +235,6 @@ public class Simplex {
             xBase[i - 1] = "x" + splitByX[1];
             splitByXCounter[i - 1] = Integer.parseInt(splitByX[1]);
         }
-        printTable(simplexTable, xSimplexTable);
-        printTable(simplexTableForDual, xSimplexTable);
         System.out.print("Базисными переменными являются: ");
         for (int i = 0; i < xBase.length; i++) {
             if (i != xBase.length - 1) {
@@ -291,8 +289,6 @@ public class Simplex {
         System.out.println(Arrays.toString(bVec));
         double min = multipleVecs(bVec, yVec);
         System.out.print("Минимальное значение целевой функции двойственной задачи\nmin = (y, b) = " + min);
-        System.out.print("\nОтвет = ");
-        System.out.printf("%.2f", simplexTable[simplexTable.length - 1][simplexTable[0].length - 1]);
     }
 
     static double[] multipleVectorMatrix(double[] vector, double[][] matrix) {
