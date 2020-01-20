@@ -319,10 +319,10 @@ public class Simplex {
 
         for (int i = 0; i < size; i++)
             for (int j = 0; j < size; j++) {
-                E[i][j] = 0f;
+                E[i][j] = 0;
 
                 if (i == j)
-                    E[i][j] = 1f;
+                    E[i][j] = 1;
             }
 
         for (int k = 0; k < size; k++) {
